@@ -1,0 +1,53 @@
+.Navbar {
+  background-color: #111827; /* dark gray */
+  color: white;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+/* make nav items stay side-by-side */
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+/* logo + text in one line */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Sign In button */
+.signin-btn {
+  padding-right: 0px;
+  margin-left: 10px;
+  max-width: fit-content;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.signin-btn:hover {
+  background-color: #1e40af;
+}
