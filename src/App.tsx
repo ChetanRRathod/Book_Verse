@@ -15,19 +15,33 @@ function App() {
   
 
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 0px", minWidth:"401px"}}>
-      <Navbar/>
     <div className="app-container">
-      <header className="navbar">
-        <h1 className="logo">📖 MangaVerse</h1>
-      </header>
+      
+      {/* Navbar sits at the top and will now span 100% width */}
+      <Navbar />
 
       <main className="main-content">
         {/* Show All Manga List */}
         {!selectedManga && (
-          <section className="section">
-            <MangaList mangas={sampleMangas} onSelect={setSelectedManga} />
-          </section>
+          <div className="dashboard-container">
+
+            <section className="manga-category">
+              <h2 className="category-title">Trending </h2>
+              {/* Pass trending mangas here */}
+              <MangaList mangas={sampleMangas} onSelect={setSelectedManga} />
+            </section>
+
+            <section className="manga-category">
+              <h2 className="category-title">New Arrivals</h2>
+              {/* Pass newly added mangas here */}
+              <MangaList mangas={sampleMangas} onSelect={setSelectedManga} />
+            </section>
+            <section className="manga-category">
+              <h2 className="category-title">Continue Reading</h2>
+              {/* In the future, filter your mangas array to only show recently read ones */}
+              <MangaList mangas={sampleMangas} onSelect={setSelectedManga} />
+            </section>
+          </div>
         )}
 
         {/* Show Selected Manga + Chapters */}
@@ -96,8 +110,6 @@ function App() {
 
       <Footer />
     </div>
-        {/* sab component yaha */}
-      </div>
   );
 }
 

@@ -2,9 +2,9 @@
   background-color: #111827; /* dark gray */
   color: white;
   padding: 10px 30px;
-  flex-wrap: wrap;
-  justify-content: space-between;
- 
+  box-sizing: border-box;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
 }
 /* make nav items stay side-by-side */
 .navbar-inner {
@@ -18,25 +18,25 @@
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .logo-img {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  margin: 0;/* Ensures heading doesn't add invisible extra height */
 }
 
 /* Sign In button */
 .signin-btn {
-  padding-right: 0px;
   margin-left: 10px;
   max-width: fit-content;
   background-color: #2563eb;
@@ -46,6 +46,7 @@
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  transition: 0.2s ease;
 }
 
 .signin-btn:hover {
