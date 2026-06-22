@@ -35,10 +35,14 @@
   margin: 0;/* Ensures heading doesn't add invisible extra height */
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the icons and the sign-in button */
+}
+
 /* Sign In button */
 .signin-btn {
-  margin-left: 10px;
-  max-width: fit-content;
   background-color: #2563eb;
   color: white;
   border: none;
@@ -51,4 +55,27 @@
 
 .signin-btn:hover {
   background-color: #1e40af;
+}
+
+.icon-btn svg {
+  width: 22px; /* Slightly scaled down from 24px so they match the text better */
+  height: 22px;
+}
+
+.icon-btn {
+  background-color: transparent; 
+  color: #a1a1aa; /* Light grey so they don't overpower the logo */
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* ✅ Makes the hover background a perfect circle */
+  transition: 0.2s ease;
+}
+
+.icon-btn:hover {
+  background-color: #2563eb; /* Uses your blue color */
+  color: white; /* Makes the icon pop when hovered */
 }
