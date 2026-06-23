@@ -37,7 +37,7 @@ body {
 /* ✅ Main Content */
 .main-content {
   flex: 1;
-  max-width: 1200px;
+  max-width: 200vh;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
